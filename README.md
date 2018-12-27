@@ -15,10 +15,10 @@
 6. make start
 
 7. Pruefen z.B. per MqttLens: 
-    Subscribe:  homie/#
-    Subscribe:  homie/testdevice/#
-    Subscribe:  homie/testdevice/$name
-    Subscribe:  homie/testdevice/$state
+   - Subscribe:  homie/#
+   - Subscribe:  homie/testdevice/#
+   - Subscribe:  homie/testdevice/$name
+   - Subscribe:  homie/testdevice/$state
     
 8. Eigenes Devices (aehnlich test_device.h) erzeugen.
 
