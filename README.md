@@ -1,4 +1,4 @@
-## Linux pahoMqttHomieClient                    Ingo Lages, 12/2018
+## Linux pahoMqttHomieClient                   # Ingo Lages, 12/2018
 
 ### Schritte zum eigenen Mqtt-Homie-Device
 
