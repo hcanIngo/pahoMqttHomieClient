@@ -23,3 +23,7 @@
 8. Eigenes Devices (aehnlich test_device.h) erzeugen.
 
 9. Anbindung an das eigene reale Device realisieren. 
+
+### Homie
+- https://github.com/homieiot/convention
+- https://homieiot.github.io/tools/
