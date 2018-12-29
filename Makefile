@@ -11,8 +11,8 @@ FLAGS += -I include/paho_mqtt_c
 
 CXXFLAGS = -std=c++14
 
-LINKFLAGS = -lpaho-mqtt3c  # libmqttv3c.so - "classic" / synchronous    ohne ssl
-# siehe:  include/paho_mqtt_c/README.md
+PAHO = paho-mqtt3c# libmqttv3c.so - "classic"/synchronous  ohne ssl (siehe: include/paho_mqtt_c/README.md)
+LINKFLAGS = -l$(PAHO)
 
 OUTNAME = libhomie-cpp
 OUTFILE = pahoMqttHomieClient
@@ -29,8 +29,10 @@ debug: LINKFLAGS += -lgcov --coverage
 debug: $(OUTFILE)
 
 installPahoLib:
-	sudo cp ./include/paho_mqtt_c/lib/libpaho-mqtt3* /usr/local/lib/
-	sudo ldconfig
+	sudo /usr/bin/install ./include/paho_mqtt_c/lib/lib$(PAHO).so.1.3.0 /usr/lib
+	sudo ln -fs /usr/lib/lib$(PAHO).so.1.3.0 /usr/lib/lib$(PAHO).so.1
+	sudo ln -fs /usr/lib/lib$(PAHO).so.1 /usr/lib/lib$(PAHO).so
+	# sudo ldconfig
 
 BROKER_IP = bananapi # test.mosquitto.org
 BROKER_REGISTRIERUNG = -u hcan  -p n_A_c
